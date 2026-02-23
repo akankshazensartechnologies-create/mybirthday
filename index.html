@@ -1,0 +1,111 @@
+birthday.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #e3f2fd, #ffffff);
+            font-family: "Segoe UI", Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background: white;
+            width: 500px;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        .hindi {
+            font-size: 18px;
+            color: #444;
+            margin-top: 10px;
+        }
+
+        .english {
+            font-size: 17px;
+            color: #555;
+            margin-top: 10px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            background: #1976d2;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #0d47a1;
+        }
+
+        #surprise {
+            display: none;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #2e7d32;
+            animation: pop 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+
+        @keyframes pop {
+            from { transform: scale(0.5); opacity: 0;}
+            to { transform: scale(1); opacity: 1;}
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+  
+
+    <h1>🎉 Happy Birthday, <span style="color:#1976d2;">ROSHAN</span> 🎂</h1>
+
+    <div class="hindi">
+        आपको जन्मदिन की हार्दिक शुभकामनाएँ।  
+        आपका जीवन खुशियों और सफलता से भरा रहे।
+    </div>
+
+    <div class="english">
+        Wishing you a very Happy Birthday and continued success in your
+        professional and personal life.
+    </div>
+
+    <button onclick="showSurprise()">🎁 Click for Surprise</button>
+
+    <div id="surprise">
+        ✨ May this year bring you new opportunities, good health, and happiness! ✨
+    </div>
+</div>
+
+<script>
+    function showSurprise() {
+        document.getElementById("surprise").style.display = "block";
+    }
+</script>
+
+</body>
+</html>
