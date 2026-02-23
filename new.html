@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(270deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb);
+    background-size: 800% 800%;
+    animation: bgMove 10s ease infinite;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes bgMove {
+    0% {background-position:0% 50%;}
+    50% {background-position:100% 50%;}
+    100% {background-position:0% 50%;}
+}
+
+.card {
+    background: rgba(255,255,255,0.9);
+    padding: 40px;
+    border-radius: 20px;
+    width: 500px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    animation: zoomIn 1.5s ease;
+}
+
+@keyframes zoomIn {
+    from {transform: scale(0.5); opacity:0;}
+    to {transform: scale(1); opacity:1;}
+}
+
+h1 {
+    font-size: 36px;
+    color: #ff4081;
+    text-shadow: 0 0 10px #ff80ab;
+}
+
+.typing {
+    font-size: 18px;
+    border-right: 2px solid black;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 4s steps(40,end) forwards;
+}
+
+@keyframes typing {
+    from {width:0;}
+    to {width:100%;}
+}
+
+.hindi {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #333;
+}
+
+.english {
+    margin-top: 10px;
+    color: #555;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    background: #ff4081;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #e91e63;
+}
+
+#surprise {
+    display: none;
+    margin-top: 15px;
+    font-size: 18px;
+    color: #2e7d32;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {opacity:0;}
+    to {opacity:1;}
+}
+
+/* Floating hearts */
+.heart {
+    position: absolute;
+    bottom: -20px;
+    font-size: 24px;
+    animation: floatUp 6s infinite;
+}
+
+@keyframes floatUp {
+    from {transform: translateY(0); opacity:1;}
+    to {transform: translateY(-800px); opacity:0;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="heart" style="left:10%; animation-delay:0s;">💖</div>
+<div class="heart" style="left:30%; animation-delay:1s;">💝</div>
+<div class="heart" style="left:50%; animation-delay:2s;">💗</div>
+<div class="heart" style="left:70%; animation-delay:3s;">💓</div>
+<div class="heart" style="left:90%; animation-delay:4s;">💞</div>
+
+<div class="card">
+    <h1>🎉 Happy Birthday, ROSHAN 🎂</h1>
+
+    <div class="typing">
+        Wishing you a day full of happiness and success!
+    </div>
+
+    <div class="hindi">
+        आपको जन्मदिन की हार्दिक शुभकामनाएँ।  
+        आपका जीवन खुशियों और मुस्कान से भरा रहे।
+    </div>
+
+    <div class="english">
+        May this year bring you joy, health, and wonderful moments.
+    </div>
+
+    <button onclick="showSurprise()">🎁 Click for Surprise</button>
+
+    <div id="surprise">
+        ✨ You are special and today is all about celebrating you! ✨
+    </div>
+</div>
+
+<script>
+function showSurprise(){
+    document.getElementById("surprise").style.display="block";
+}
+</script>
+
+</body>
+</html>
